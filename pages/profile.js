@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { getSession } from 'next-auth/react'
+import { getSession } from 'next-auth/react';
 
-export default () => {
+const ProfilePage = () => {
     return (
         <section className="container mx-auto text-center">
                 <h3 className="text-4xl font-bold">Profile Page</h3>
@@ -11,6 +11,8 @@ export default () => {
     )
 }
 
+export default ProfilePage;
+
 export async function getServerSideProps({ req }){
     const session = await getSession({ req })
 
@@ -18,7 +20,7 @@ export async function getServerSideProps({ req }){
         return {
             redirect : {
                 destination : "/login",
-                premanent: false
+                permanent: false
             }
         }
     }

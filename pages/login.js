@@ -102,14 +102,14 @@ export default function Login() {
 
                     <div className="input-button">
                     <button type='button' onClick={handleGoogleSignin} className={styles.button_custom}>
-                        Sign In with Google <Image src={'/assets/google.svg'} width="20" height={20} ></Image>
+                        Sign In with Google <Image src={'/assets/google.svg'} width="20" height={20} alt='google_img'></Image>
                     </button>
                 </div>
             </form>
 
             {/* bottom */}
             <p className='text-center text-gray-400 '>
-                don't have an account yet? <Link href={'/register'} className='text-blue-700'>Sign Up</Link>
+                don&#39;t have an account yet? <Link href={'/register'} className='text-blue-700'>Sign Up</Link>
             </p>
         </section>
 
